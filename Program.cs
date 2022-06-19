@@ -1,16 +1,27 @@
 ﻿static void SelectArr()
 {
-    string[] arr1 = new string[] { "колобок", "уж", "ёрш", "гипотоламус", "кукушка", "мышь", "lan", "15" };
-    int[] array = new int[arr1.Length];
+    string[] array = new string[] { "колобок", "уж", "ёрш", "гипотоламус", "кукушка", "мышь", "lan", "15" };
+    int z = 0;
     for (int i = 0; i < array.Length; i++)
     {
-        if (arr1[i].Length <= 3)
+        if (array[i].Length <= 3)
         {
-            Console.WriteLine(arr1[i]);
+            z++;
         }
-
     }
-
-
+    string[] array2 = new string[z];
+    z = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+        {
+            array2[z] = array[i];
+            z++;
+        }
+    }
+    for (int j = 0; j < array2.Length; j++)
+    {
+        Console.Write(array2[j] + "; ");
+    }
 }
 SelectArr();
